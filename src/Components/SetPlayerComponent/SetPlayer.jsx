@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Switch, BrowserRouter, Route } from "react-router-dom";
+import { Redirect, Switch } from "react-router-dom";
 import {
   Container,
   Button,
@@ -10,8 +10,6 @@ import {
   InputGroup,
   InputGroupText
 } from "reactstrap";
-
-import Play from "../PlayComponent/Play";
 
 import Fade from "react-reveal/Fade";
 
@@ -87,57 +85,51 @@ export default class SetPlayer extends React.Component {
     }
     return (
       <div>
-        <BrowserRouter>
-          <Container>
-            <Fade delay={1000} duration={1000}>
-              <Form onSubmit={this.handleSubmit}>
-                <FormGroup>
-                  <Label for="username" className="bold-text">
-                    Elige un nombre para jugar!
-                  </Label>
-                  <InputGroup>
-                    <InputGroupText>
-                      <span role="img">🎮</span>
-                    </InputGroupText>
-                    <Input
-                      required
-                      id="username"
-                      type="text"
-                      name="username"
-                      onChange={this.handleInputChange}
-                      placeholder="Necesitas un nombre para jugar"
-                    />
-                  </InputGroup>
-                </FormGroup>
-                <FormGroup>
-                  <Label for="username" className="bold-text">
-                    Sala
-                  </Label>
-                  <InputGroup>
-                    <InputGroupText>
-                      <span role="img">🎎</span>
-                    </InputGroupText>
-                    <Input
-                      required
-                      onChange={this.handleInputChange}
-                      type="text"
-                      name="sala"
-                      id="sala"
-                      placeholder="¿A qué sala quieres unirte?"
-                    />
-                  </InputGroup>
-                </FormGroup>
-                <Button className="play-btn" block>
-                  JUGAR
-                </Button>
-              </Form>
-            </Fade>
-          </Container>
-
-          <Switch>
-            <Route path="/jugar" component={Play} />
-          </Switch>
-        </BrowserRouter>
+        <Container>
+          <Fade delay={1000} duration={1000}>
+            <Form onSubmit={this.handleSubmit}>
+              <FormGroup>
+                <Label for="username" className="bold-text">
+                  Elige un nombre para jugar!
+                </Label>
+                <InputGroup>
+                  <InputGroupText>
+                    <span role="img">🎮</span>
+                  </InputGroupText>
+                  <Input
+                    required
+                    id="username"
+                    type="text"
+                    name="username"
+                    onChange={this.handleInputChange}
+                    placeholder="Necesitas un nombre para jugar"
+                  />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <Label for="username" className="bold-text">
+                  Sala
+                </Label>
+                <InputGroup>
+                  <InputGroupText>
+                    <span role="img">🎎</span>
+                  </InputGroupText>
+                  <Input
+                    required
+                    onChange={this.handleInputChange}
+                    type="text"
+                    name="sala"
+                    id="sala"
+                    placeholder="¿A qué sala quieres unirte?"
+                  />
+                </InputGroup>
+              </FormGroup>
+              <Button className="play-btn" block>
+                JUGAR
+              </Button>
+            </Form>
+          </Fade>
+        </Container>
       </div>
     );
   }
