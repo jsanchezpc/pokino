@@ -1,0 +1,32 @@
+/* Colors from https://colorhunt.co/palette/ffbd353fa7968267be502064 */
+
+body {
+  margin: 0%;
+  background-color: #ffbd35;
+  font-family: font-family: 'Anton', sans-serif !important;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.green-text {
+  color: #3fa796;
+  font-family: font-family: 'Anton', sans-serif !important;
+  font-weight: bold;
+}
+
+button.play-btn {
+  background-color: #8267BE;
+  font-weight: bold;
+}
+
+button.play-btn:hover {
+  background-color: #502064;
+  font-weight: bold;
+}
